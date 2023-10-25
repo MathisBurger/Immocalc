@@ -27,10 +27,42 @@ struct SearchObject: Decodable, Identifiable {
     let grossReturn: Float
     let grossReturnCurrent: Float?
     let images: [SearchObjectImage]
-    
+    let platforms: [SearchObjectPlatform]
+    let lift: Bool
+    let cellar: Bool
+    let balcony: Bool
+    let garden: Bool
+    let rented: Bool
+    let comission: Float?
+    let locationFactor: SearchObjectLocation
+    let originalAddress: SearchObjectLocationAddress
 }
 
 struct SearchObjectImage: Decodable {
     let id: String
     let originalUrl: String
+}
+
+struct SearchObjectPlatform: Decodable {
+    let id: String
+    let url: String
+}
+
+struct SearchObjectLocation: Decodable {
+    let population: Int
+    let populationTrend: SearchObjectLocationPopulationTrend
+    let score: Int
+    let unemploymentRate: Float
+    let hasUniversity: Bool
+    let numberOfStudents: Int?
+    let universityScore: Int?
+}
+
+struct SearchObjectLocationPopulationTrend: Decodable {
+    let from: Float
+    let to: Float
+}
+
+struct SearchObjectLocationAddress: Decodable {
+    let locationQuery: String
 }

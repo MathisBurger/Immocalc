@@ -12,14 +12,22 @@ struct SearchView: View {
     
     
     var body: some View {
-        VStack {
-            ForEach(objects) { object in
-                ImmoCard(object: object)
-            }
-        }.navigationBarTitle(Text("Objects"), displayMode:.automatic)
-        .onAppear() {
-                ApiService().getSearchResults { searchObjects in
-                    self.objects = searchObjects;
+        NavigationStack {
+            ScrollView {
+                VStack {
+                    ForEach(objects) { object in
+                        NavigationLink {
+                            ObjectDetailsView(object: object)
+                        } label: {
+                            ImmoCard(object: object)
+                        }
+                    }
+                }.navigationBarTitle(Text("Objekte"), displayMode:.automatic)
+                .onAppear() {
+                        ApiService().getSearchResults { searchObjects in
+                            self.objects = searchObjects;
+                    }
+                }
             }
         }
     }
