@@ -9,13 +9,27 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationSplitView {
+            List {
+                NavigationLink {
+                    HistoryView()
+                } label: {
+                    NavigationRow(text: "History", icon: Image(systemName: "wifi"))
+                }
+                NavigationLink {
+                    CalculateView()
+                } label: {
+                    NavigationRow(text: "Calculate", icon: Image(systemName: "speaker"))
+                }
+                NavigationLink {
+                    SearchView()
+                } label: {
+                    NavigationRow(text: "Search", icon: Image(systemName: "search"))
+                }
+            }.navigationTitle("Start")
+        } detail: {
+            Text("Select next step")
         }
-        .padding()
     }
 }
 
