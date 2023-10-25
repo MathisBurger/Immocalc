@@ -12,19 +12,14 @@ struct ContentView: View {
         NavigationSplitView {
             List {
                 NavigationLink {
-                    HistoryView()
-                } label: {
-                    NavigationRow(text: "History", icon: Image(systemName: "wifi"))
-                }
-                NavigationLink {
-                    CalculateView()
-                } label: {
-                    NavigationRow(text: "Calculate", icon: Image(systemName: "speaker"))
-                }
-                NavigationLink {
                     SearchView()
                 } label: {
-                    NavigationRow(text: "Search", icon: Image(systemName: "search"))
+                    NavigationRow(text: "Alle Objekte", icon: Image(systemName: "magnifyingglass"))
+                }
+                NavigationLink {
+                    SearchSettingsView()
+                } label: {
+                    NavigationRow(text: "Suche bearbeiten", icon: Image(systemName: "gear"))
                 }
             }.navigationTitle("Start")
         } detail: {

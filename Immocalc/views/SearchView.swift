@@ -8,8 +8,20 @@
 import SwiftUI
 
 struct SearchView: View {
+    @State var objects = [SearchObject]();
+    
+    
     var body: some View {
-        Text("Search")
+        VStack {
+            ForEach(objects) { object in
+                ImmoCard(object: object)
+            }
+        }.navigationBarTitle(Text("Objects"), displayMode:.automatic)
+        .onAppear() {
+                ApiService().getSearchResults { searchObjects in
+                    self.objects = searchObjects;
+            }
+        }
     }
 }
 
