@@ -25,6 +25,8 @@
 		D89E7D8C2AE987BF0079EF3F /* BooleanWithTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89E7D8B2AE987BF0079EF3F /* BooleanWithTitle.swift */; };
 		D89E7D8E2AE98A3F0079EF3F /* FinanceDataList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89E7D8D2AE98A3F0079EF3F /* FinanceDataList.swift */; };
 		D89E7D902AE98FF40079EF3F /* LocationDataList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89E7D8F2AE98FF40079EF3F /* LocationDataList.swift */; };
+		D89E7D922AE9937D0079EF3F /* SearchSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89E7D912AE9937D0079EF3F /* SearchSettings.swift */; };
+		D89E7D982AE997AD0079EF3F /* SearchSettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89E7D972AE997AD0079EF3F /* SearchSettingsStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,8 @@
 		D89E7D8B2AE987BF0079EF3F /* BooleanWithTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooleanWithTitle.swift; sourceTree = "<group>"; };
 		D89E7D8D2AE98A3F0079EF3F /* FinanceDataList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceDataList.swift; sourceTree = "<group>"; };
 		D89E7D8F2AE98FF40079EF3F /* LocationDataList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDataList.swift; sourceTree = "<group>"; };
+		D89E7D912AE9937D0079EF3F /* SearchSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSettings.swift; sourceTree = "<group>"; };
+		D89E7D972AE997AD0079EF3F /* SearchSettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSettingsStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +118,7 @@
 		D89E7D3E2AE94F310079EF3F /* Immocalc */ = {
 			isa = PBXGroup;
 			children = (
+				D89E7D962AE9979C0079EF3F /* stores */,
 				D89E7D7B2AE96BFA0079EF3F /* components */,
 				D89E7D742AE957F70079EF3F /* models */,
 				D89E7D722AE957200079EF3F /* api */,
@@ -157,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				D89E7D752AE958450079EF3F /* SearchResponse.swift */,
+				D89E7D912AE9937D0079EF3F /* SearchSettings.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -182,6 +188,14 @@
 				D89E7D8F2AE98FF40079EF3F /* LocationDataList.swift */,
 			);
 			path = detailedView;
+			sourceTree = "<group>";
+		};
+		D89E7D962AE9979C0079EF3F /* stores */ = {
+			isa = PBXGroup;
+			children = (
+				D89E7D972AE997AD0079EF3F /* SearchSettingsStore.swift */,
+			);
+			path = stores;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,6 +334,7 @@
 				D89E7D6A2AE950650079EF3F /* NavigationRow.swift in Sources */,
 				D89E7D8C2AE987BF0079EF3F /* BooleanWithTitle.swift in Sources */,
 				D89E7D422AE94F310079EF3F /* ContentView.swift in Sources */,
+				D89E7D982AE997AD0079EF3F /* SearchSettingsStore.swift in Sources */,
 				D89E7D712AE957130079EF3F /* SearchView.swift in Sources */,
 				D89E7D852AE9800D0079EF3F /* ImageSliderView.swift in Sources */,
 				D89E7D7F2AE9709A0079EF3F /* TextWithTitle.swift in Sources */,
@@ -329,6 +344,7 @@
 				D89E7D812AE973030079EF3F /* SearchSettingsView.swift in Sources */,
 				D89E7D402AE94F310079EF3F /* ImmocalcApp.swift in Sources */,
 				D89E7D882AE986210079EF3F /* Headline.swift in Sources */,
+				D89E7D922AE9937D0079EF3F /* SearchSettings.swift in Sources */,
 				D89E7D8E2AE98A3F0079EF3F /* FinanceDataList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
