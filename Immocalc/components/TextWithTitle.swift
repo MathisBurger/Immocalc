@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// Displays a text as a title
 struct TextWithTitle: View {
     var text: String
     var title: String

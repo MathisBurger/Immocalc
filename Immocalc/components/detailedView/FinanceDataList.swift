@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// Displays all the finance data of the search object
 struct FinanceDataList: View {
     var object: SearchObject
     

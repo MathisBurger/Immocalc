@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// Displays all object details
 struct ObjectDetailsView: View {
     var object: SearchObject
     

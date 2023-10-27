@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// Displays all the location data of the search object
 struct LocationDataList: View {
     var object: SearchObject
     

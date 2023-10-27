@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// Base app that wrapps the navigation
 struct ContentView: View {
     var body: some View {
         NavigationSplitView {

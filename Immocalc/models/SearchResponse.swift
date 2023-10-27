@@ -7,12 +7,14 @@
 
 import Foundation
 
+/// The search response from the API
 struct SearchResponse: Decodable {
     let total: Int
     let results: [SearchObject]
     
 }
 
+/// Single search object that is send by the API
 struct SearchObject: Decodable, Identifiable {
     let id: String
     let title: String
@@ -38,16 +40,19 @@ struct SearchObject: Decodable, Identifiable {
     let originalAddress: SearchObjectLocationAddress?
 }
 
+/// An Image of a search object
 struct SearchObjectImage: Decodable {
     let id: String
     let originalUrl: String
 }
 
+/// A platform of a search object
 struct SearchObjectPlatform: Decodable {
     let id: String
     let url: String
 }
 
+/// A location of a search object
 struct SearchObjectLocation: Decodable {
     let population: Int
     let populationTrend: SearchObjectLocationPopulationTrend
@@ -58,11 +63,13 @@ struct SearchObjectLocation: Decodable {
     let universityScore: Int?
 }
 
+/// Population trend of the city of an object
 struct SearchObjectLocationPopulationTrend: Decodable {
     let from: Float
     let to: Float
 }
 
+/// Address of an object
 struct SearchObjectLocationAddress: Decodable {
     let locationQuery: String?
 }

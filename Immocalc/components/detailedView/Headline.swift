@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// Displays text as a headline in the detailed view
 struct Headline: View {
     var text: String
     

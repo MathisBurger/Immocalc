@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// View for editing search settings
 struct SearchSettingsView: View {
     
     @State private var searchSettings = SearchSettingsStore();
@@ -21,6 +22,7 @@ struct SearchSettingsView: View {
     @State private var notificationText = "";
     @State private var notificationShown = false;
     
+    /// Saves the search settings
     func saveData() async {
         let data = SearchSettings(leasehold: leasehold, foreClosure: foreClosure, newBuilding: newBuilding, grossReturnFrom: grossReturnFrom, grossReturnTo: grossReturnTo, buyingPriceFrom: 0, buyingPriceTo: buyingPriceTo, sortBy: sortBy, geoSearches: geoSearches);
         do {

@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// Displays an image slider
 struct ImageSliderView: View {
     var images: [SearchObjectImage]
     var body: some View {

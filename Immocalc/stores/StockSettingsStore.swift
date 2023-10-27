@@ -7,15 +7,18 @@
 
 import SwiftUI
 
+/// Stores all important stock settings 
 class StockSettingsStore: ObservableObject {
     
     @Published var stockSettings: StockSettings? = nil;
     
+    /// Gets the file url of the target data file
     private static func fileURL() throws -> URL {
         try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
             .appendingPathComponent("stockSettings.data")
     }
     
+    /// Loads all the data from the file and stores it into the class object
     func load() async throws {
         let task = Task<StockSettings?, Error> {
             let fileURL = try Self.fileURL()
@@ -31,6 +34,7 @@ class StockSettingsStore: ObservableObject {
         }
     }
     
+    /// Saves the given object into the file of the file url/
     func save(settings: StockSettings) async throws {
             let task = Task {
                 let data = try JSONEncoder().encode(settings)

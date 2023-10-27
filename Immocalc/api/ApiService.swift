@@ -7,14 +7,17 @@
 
 import Foundation
 
+/// General api service
 class ApiService {
     
     var searchSettings: SearchSettings?;
     
+    /// Constructor
     init(searchSettings: SearchSettings?) {
         self.searchSettings = searchSettings
     }
     
+    /// Gets all search results
     func getSearchResults(completion:@escaping ([SearchObject]) -> ()) {
         if (self.searchSettings != nil) {
             let settings = self.searchSettings!;
@@ -34,6 +37,7 @@ class ApiService {
         }
     }
     
+    /// Formats objects to json
     private func formatGeoAreasToJson(areas: [GeoSearch]) -> String {
         let jsonData = try! JSONEncoder().encode(areas);
         let data = String(data: jsonData, encoding: String.Encoding.utf8);

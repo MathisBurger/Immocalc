@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// Displays a boolean value with title
 struct BooleanWithTitle: View {
     var status: Bool
     var title: String

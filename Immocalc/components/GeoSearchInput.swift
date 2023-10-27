@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// Inputs geosearch data
 struct GeoSearchInput: View {
     
     var geoSearches: Binding<[GeoSearch]>
@@ -14,6 +15,7 @@ struct GeoSearchInput: View {
     @State private var region = "";
     @State private var alertShown = false;
     
+    /// Adds an geosearch
     func addToGeoSearches() {
         let search = GeoSearch(geoSearchQuery: searchQuery, geoSearchType: "city", region: region);
         self.searchQuery = "";
@@ -22,12 +24,14 @@ struct GeoSearchInput: View {
         self.alertShown.toggle();
     }
     
+    /// Cancels the add action
     func cancelAddAction()  {
         self.searchQuery = "";
         self.region = "";
         self.alertShown.toggle();
     }
     
+    /// Removes an specific element
     func removeElement(el: GeoSearch) {
         let index = self.geoSearches.wrappedValue.firstIndex(of: el);
         if (index != nil) {

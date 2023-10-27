@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Search settings that are stored locally
 struct SearchSettings: Hashable, Codable {
     var leasehold: Bool
     var foreClosure: Bool
@@ -18,6 +19,7 @@ struct SearchSettings: Hashable, Codable {
     var sortBy: String
     var geoSearches: [GeoSearch]
     
+    /// No param init
     init() {
         self.leasehold = false;
         self.foreClosure = false;
@@ -30,6 +32,7 @@ struct SearchSettings: Hashable, Codable {
         self.geoSearches = [GeoSearch]();
     }
     
+    /// All param init
     init(leasehold: Bool, foreClosure: Bool, newBuilding: Bool, grossReturnFrom: Float, grossReturnTo: Float, buyingPriceFrom: Int, buyingPriceTo: Int, sortBy: String, geoSearches: [GeoSearch]) {
         self.leasehold = leasehold;
         self.foreClosure = foreClosure;
@@ -43,6 +46,7 @@ struct SearchSettings: Hashable, Codable {
     }
 }
 
+/// Geosearch subtype
 struct GeoSearch: Hashable, Codable {
     var geoSearchQuery: String
     var geoSearchType: String

@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// Displays all the base data of the search object
 struct BaseDataList: View {
     var object: SearchObject
     

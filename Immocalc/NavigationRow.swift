@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// A nav row displays all important data of a navigation row
 struct NavigationRow: View {
     var text: String;
     var icon: Image;
@@ -16,11 +17,5 @@ struct NavigationRow: View {
             icon
             Text(text)
         }
-    }
-}
-
-struct NavigationRow_Previews: PreviewProvider {
-    static var previews: some View {
-        NavigationRow(text: "Test", icon: Image(systemName: "wifi"))
     }
 }

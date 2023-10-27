@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// Input field for integer values
 struct IntegerField: View {
     let text: String;
     let binding: Binding<Int>

@@ -7,11 +7,13 @@
 
 import SwiftUI
 
+/// Input field for input sorting
 struct SortByInput: View {
     var selection: Binding<String>
     @State private var sortObject = "leasehold";
     @State private var sortDirection = "desc";
     
+    /// Updates the selected data in the parent element
     private func updateSelectionData() {
         let splitArray = self.selection.wrappedValue.components(separatedBy: ",");
         self.sortObject = splitArray[0];

@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// View that displays the search context
 struct SearchView: View {
     @State var objects = [SearchObject]();
     @StateObject var settingsStore = SearchSettingsStore();

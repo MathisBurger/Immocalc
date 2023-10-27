@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// Displays an object in a card
 struct ImmoCard: View {
     var object: SearchObject!
     

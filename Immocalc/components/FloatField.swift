@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// Displays a float with a title
 struct FloatField: View {
     let text: String;
     let binding: Binding<Float>

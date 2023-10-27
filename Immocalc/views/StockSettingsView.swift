@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// View for editing the stock settings
 struct StockSettingsView: View {
     
     @State private var store = StockSettingsStore();

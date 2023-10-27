@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// Displays all the ROI data of the search object
 struct RoiDataList: View {
     
     @State private var store = StockSettingsStore();
@@ -16,15 +17,18 @@ struct RoiDataList: View {
     
     var object: SearchObject;
     
+    /// Calculates the credit duration
     func calcCredDur(debt: Int, bankRate: Float, grossReturn: Float) -> Int {
         return calculateCreditDuration(debtsLeft: debt, bankInterestRate: bankRate, creditRate: creditRate(buyingPrice: debt, grossReturn: grossReturn));
     }
     
+    /// Calculates the compound interest
     func calcComInt(debt: Int, bankRate: Float, grossReturn: Float, valueInc: Float) -> Int {
         let duration = calcCredDur(debt: debt, bankRate: bankRate, grossReturn: grossReturn);
         return calcCompoundInterest(start: debt, interest: valueInc, years: duration);
     }
     
+    /// Checks wheather stocks pay off 
     func stocksPayOff() -> Bool {
         let diff = calcComInt(debt: object.buyingPrice, bankRate: bankInterest, grossReturn: object.grossReturn, valueInc: valueIncreaseRate) - calcCompoundInterest(start: object.buyingPrice/10, interest: interest, years: calcCredDur(debt: object.buyingPrice, bankRate: bankInterest, grossReturn: object.grossReturn));
         return diff <= 0;
