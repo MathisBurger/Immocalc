@@ -21,9 +21,9 @@ struct SearchObject: Decodable, Identifiable {
     let rooms: Int
     let squareMeter: Float
     let rentPricePerSqm: Float
-    let pricePerSqm: Int
-    let rentPrice: Int
-    let rentPriceCurrent: Int?
+    let pricePerSqm: Float
+    let rentPrice: Float?
+    let rentPriceCurrent: Float?
     let grossReturn: Float
     let grossReturnCurrent: Float?
     let images: [SearchObjectImage]
@@ -35,7 +35,7 @@ struct SearchObject: Decodable, Identifiable {
     let rented: Bool
     let comission: Float?
     let locationFactor: SearchObjectLocation
-    let originalAddress: SearchObjectLocationAddress
+    let originalAddress: SearchObjectLocationAddress?
 }
 
 struct SearchObjectImage: Decodable {
@@ -64,5 +64,5 @@ struct SearchObjectLocationPopulationTrend: Decodable {
 }
 
 struct SearchObjectLocationAddress: Decodable {
-    let locationQuery: String
+    let locationQuery: String?
 }

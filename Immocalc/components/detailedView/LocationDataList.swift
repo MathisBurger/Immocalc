@@ -12,11 +12,13 @@ struct LocationDataList: View {
     
     var body: some View {
         VStack(alignment: .center) {
-            TextWithTitle(text: object.originalAddress.locationQuery, title: "Adresse")
+            if (object.originalAddress != nil && object.originalAddress?.locationQuery != nil) {
+                TextWithTitle(text: (object.originalAddress!).locationQuery!, title: "Adresse")
+            }
             Spacer()
             HStack(alignment: .center, spacing: 40) {
                 TextWithTitle(text: String(object.locationFactor.population), title: "Bevölkerung")
-                TextWithTitle(text: String(object.locationFactor.populationTrend.from)+"% -" + String(object.locationFactor.populationTrend.to)+"%", title: "Bevölkerungstrend")
+                TextWithTitle(text: String(object.locationFactor.populationTrend.from)+"% bis " + String(object.locationFactor.populationTrend.to)+"%", title: "Bevölkerungstrend")
                 TextWithTitle(text: String(object.locationFactor.score), title: "Ranking")
             }
             Spacer()

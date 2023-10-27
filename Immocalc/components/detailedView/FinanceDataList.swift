@@ -16,7 +16,7 @@ struct FinanceDataList: View {
             HStack(alignment: .center, spacing: 40) {
                 TextWithTitle(text: String(object.grossReturn)+"%", title: "Rendite")
                 TextWithTitle(text: String(object.rentPricePerSqm)+"€", title: "Preis/m²")
-                TextWithTitle(text: String(object.rentPrice) + "€", title: "Miete")
+                TextWithTitle(text: object.rentPrice != nil ? String(object.rentPrice!) + "€" : "-/-", title: "Miete")
             }
             Spacer()
             HStack(alignment: .center, spacing: 40) {

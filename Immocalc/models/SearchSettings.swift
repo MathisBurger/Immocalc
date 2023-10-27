@@ -8,17 +8,49 @@
 import Foundation
 
 struct SearchSettings: Hashable, Codable {
-    let leasehold: Bool
-    /*let foreClosure: Bool?
-    let newBuilding: Bool?
-    let grossReturnFrom: Float?
-    let grossReturnTo: Float?
-    let buyingPriceFrom: Int?
-    let buyingPriceTo: Int?
-    let sortBy: String?
-    let geoSearches: String?*/
+    var leasehold: Bool
+    var foreClosure: Bool
+    var newBuilding: Bool
+    var grossReturnFrom: Float
+    var grossReturnTo: Float
+    var buyingPriceFrom: Int
+    var buyingPriceTo: Int
+    var sortBy: String
+    var geoSearches: [GeoSearch]
     
     init() {
-        self.leasehold = true;
+        self.leasehold = false;
+        self.foreClosure = false;
+        self.newBuilding =  false;
+        self.grossReturnFrom = 0;
+        self.grossReturnTo = 100;
+        self.buyingPriceFrom = 0;
+        self.buyingPriceTo = 1000000;
+        self.sortBy = "leasehold,desc";
+        self.geoSearches = [GeoSearch]();
+    }
+    
+    init(leasehold: Bool, foreClosure: Bool, newBuilding: Bool, grossReturnFrom: Float, grossReturnTo: Float, buyingPriceFrom: Int, buyingPriceTo: Int, sortBy: String, geoSearches: [GeoSearch]) {
+        self.leasehold = leasehold;
+        self.foreClosure = foreClosure;
+        self.newBuilding =  newBuilding;
+        self.grossReturnFrom = grossReturnFrom;
+        self.grossReturnTo = grossReturnTo;
+        self.buyingPriceFrom = buyingPriceFrom;
+        self.buyingPriceTo = buyingPriceTo;
+        self.sortBy = sortBy;
+        self.geoSearches = geoSearches;
+    }
+}
+
+struct GeoSearch: Hashable, Codable {
+    var geoSearchQuery: String
+    var geoSearchType: String
+    var region: String
+    
+    init(geoSearchQuery: String, geoSearchType: String, region: String) {
+        self.geoSearchQuery = geoSearchQuery
+        self.geoSearchType = geoSearchType
+        self.region = region
     }
 }

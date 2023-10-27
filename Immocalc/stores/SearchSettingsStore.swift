@@ -20,7 +20,7 @@ class SearchSettingsStore: ObservableObject {
         let task = Task<SearchSettings?, Error> {
             let fileURL = try Self.fileURL()
             guard let data = try? Data(contentsOf: fileURL) else {
-                return nil
+                return SearchSettings();
             }
             let settings = try JSONDecoder().decode(SearchSettings.self, from: data)
             return settings

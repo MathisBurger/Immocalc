@@ -16,15 +16,27 @@ class ApiService {
     }
     
     func getSearchResults(completion:@escaping ([SearchObject]) -> ()) {
-        print(searchSettings?.leasehold);
-        let url = URL(string: "https://api.thinkimmo.com/immo?type=APARTMENTBUY&active=true&leasehold=false&foreClosure=false&newBuilding=false&grossReturnFrom=6&buyingPriceTo=140000&sortBy=grossReturn,desc&geoSearches=%5B%7B%22geoSearchQuery%22%3A%22Ingolstadt%22,%22geoSearchType%22%3A%22city%22,%22region%22%3A%22Bayern%22%7D%5D")!;
+        if (self.searchSettings != nil) {
+            let settings = self.searchSettings!;
+            let unformattedUrl = "https://api.thinkimmo.com/immo?type=APARTMENTBUY&active=true&leasehold=" + String(settings.leasehold) + "&foreClosure=" + String(settings.foreClosure) + "&newBuilding=" + String(settings.newBuilding) + "&grossReturnFrom=" + String(settings.grossReturnFrom) + "&grossReturnTo=" + String(settings.grossReturnTo) + "&buyingPriceTo=" + String(settings.buyingPriceTo) + "&sortBy=" + String(settings.sortBy) + "&geoSearches=" + self.formatGeoAreasToJson(areas: settings.geoSearches);
+            let formattedUrl = unformattedUrl.addingPercentEncoding(withAllowedCharacters:
+                    .urlFragmentAllowed);
             
-            URLSession.shared.dataTask(with: url) { (data, _, _) in
-                let result = try! JSONDecoder().decode(SearchResponse.self, from: data!)
-                DispatchQueue.main.async {
-                    completion(result.results)
+            let url = URL(string: formattedUrl!)!;
+                
+                URLSession.shared.dataTask(with: url) { (data, _, _) in
+                    let result = try! JSONDecoder().decode(SearchResponse.self, from: data!)
+                    DispatchQueue.main.async {
+                        completion(result.results)
+                    }
                 }
-            }
-            .resume()
+                .resume()
         }
+    }
+    
+    private func formatGeoAreasToJson(areas: [GeoSearch]) -> String {
+        let jsonData = try! JSONEncoder().encode(areas);
+        let data = String(data: jsonData, encoding: String.Encoding.utf8);
+        return data!;
+    }
 }
