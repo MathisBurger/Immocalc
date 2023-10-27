@@ -39,6 +39,12 @@ struct ObjectDetailsView: View {
                 Divider()
                 Spacer()
             }
+            VStack(alignment: .center) {
+                Headline(text: "ROI Analyse")
+                RoiDataList(object: object)
+                Divider()
+                Spacer()
+            }
             .toolbar {
                 if (!object.platforms.isEmpty) {
                     ToolbarItemGroup(placement: .bottomBar) {
@@ -46,7 +52,7 @@ struct ObjectDetailsView: View {
                             if let url = URL(string: object.platforms[0].url) {
                                UIApplication.shared.open(url)
                             }
-                        }//.buttonStyle(.borderedProminent)
+                        }
                     }
                 }
             }

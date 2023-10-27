@@ -10,6 +10,7 @@
 		D87CEB9D2AEC3C6C00BD6820 /* StockSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87CEB9C2AEC3C6C00BD6820 /* StockSettings.swift */; };
 		D87CEB9F2AEC3CCF00BD6820 /* StockSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87CEB9E2AEC3CCF00BD6820 /* StockSettingsView.swift */; };
 		D87CEBA12AEC3CF100BD6820 /* StockSettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87CEBA02AEC3CF100BD6820 /* StockSettingsStore.swift */; };
+		D87CEBA32AEC410800BD6820 /* RoiDataList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87CEBA22AEC410800BD6820 /* RoiDataList.swift */; };
 		D89E7D402AE94F310079EF3F /* ImmocalcApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89E7D3F2AE94F310079EF3F /* ImmocalcApp.swift */; };
 		D89E7D422AE94F310079EF3F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89E7D412AE94F310079EF3F /* ContentView.swift */; };
 		D89E7D442AE94F320079EF3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D89E7D432AE94F320079EF3F /* Assets.xcassets */; };
@@ -57,6 +58,7 @@
 		D87CEB9C2AEC3C6C00BD6820 /* StockSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockSettings.swift; sourceTree = "<group>"; };
 		D87CEB9E2AEC3CCF00BD6820 /* StockSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockSettingsView.swift; sourceTree = "<group>"; };
 		D87CEBA02AEC3CF100BD6820 /* StockSettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockSettingsStore.swift; sourceTree = "<group>"; };
+		D87CEBA22AEC410800BD6820 /* RoiDataList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoiDataList.swift; sourceTree = "<group>"; };
 		D89E7D3C2AE94F310079EF3F /* Immocalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Immocalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D89E7D3F2AE94F310079EF3F /* ImmocalcApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImmocalcApp.swift; sourceTree = "<group>"; };
 		D89E7D412AE94F310079EF3F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 				D89E7D892AE9866A0079EF3F /* BaseDataList.swift */,
 				D89E7D8D2AE98A3F0079EF3F /* FinanceDataList.swift */,
 				D89E7D8F2AE98FF40079EF3F /* LocationDataList.swift */,
+				D87CEBA22AEC410800BD6820 /* RoiDataList.swift */,
 			);
 			path = detailedView;
 			sourceTree = "<group>";
@@ -361,6 +364,7 @@
 				D89E7D982AE997AD0079EF3F /* SearchSettingsStore.swift in Sources */,
 				D87CEB9F2AEC3CCF00BD6820 /* StockSettingsView.swift in Sources */,
 				D89E7D712AE957130079EF3F /* SearchView.swift in Sources */,
+				D87CEBA32AEC410800BD6820 /* RoiDataList.swift in Sources */,
 				D89E7DAB2AEBDE960079EF3F /* GeoSearchInput.swift in Sources */,
 				D87CEBA12AEC3CF100BD6820 /* StockSettingsStore.swift in Sources */,
 				D89E7D852AE9800D0079EF3F /* ImageSliderView.swift in Sources */,
