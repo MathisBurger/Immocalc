@@ -59,6 +59,7 @@
 		D87CEB9E2AEC3CCF00BD6820 /* StockSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockSettingsView.swift; sourceTree = "<group>"; };
 		D87CEBA02AEC3CF100BD6820 /* StockSettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockSettingsStore.swift; sourceTree = "<group>"; };
 		D87CEBA22AEC410800BD6820 /* RoiDataList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoiDataList.swift; sourceTree = "<group>"; };
+		D87CEBA42AEC59B900BD6820 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D89E7D3C2AE94F310079EF3F /* Immocalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Immocalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D89E7D3F2AE94F310079EF3F /* ImmocalcApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImmocalcApp.swift; sourceTree = "<group>"; };
 		D89E7D412AE94F310079EF3F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -116,6 +117,7 @@
 		D89E7D332AE94F310079EF3F = {
 			isa = PBXGroup;
 			children = (
+				D87CEBA42AEC59B900BD6820 /* README.md */,
 				D89E7D3E2AE94F310079EF3F /* Immocalc */,
 				D89E7D3D2AE94F310079EF3F /* Products */,
 			);
