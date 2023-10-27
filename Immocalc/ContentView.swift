@@ -21,6 +21,11 @@ struct ContentView: View {
                 } label: {
                     NavigationRow(text: "Suche bearbeiten", icon: Image(systemName: "gear"))
                 }
+                NavigationLink {
+                    StockSettingsView()
+                } label: {
+                    NavigationRow(text: "Vergleichsrendite bearbeiten", icon: Image(systemName: "chart.line.uptrend.xyaxis"))
+                }
             }.navigationTitle("Start")
         } detail: {
             Text("Select next step")

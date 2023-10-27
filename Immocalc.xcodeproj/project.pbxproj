@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D87CEB9D2AEC3C6C00BD6820 /* StockSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87CEB9C2AEC3C6C00BD6820 /* StockSettings.swift */; };
+		D87CEB9F2AEC3CCF00BD6820 /* StockSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87CEB9E2AEC3CCF00BD6820 /* StockSettingsView.swift */; };
+		D87CEBA12AEC3CF100BD6820 /* StockSettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87CEBA02AEC3CF100BD6820 /* StockSettingsStore.swift */; };
 		D89E7D402AE94F310079EF3F /* ImmocalcApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89E7D3F2AE94F310079EF3F /* ImmocalcApp.swift */; };
 		D89E7D422AE94F310079EF3F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89E7D412AE94F310079EF3F /* ContentView.swift */; };
 		D89E7D442AE94F320079EF3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D89E7D432AE94F320079EF3F /* Assets.xcassets */; };
@@ -51,6 +54,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D87CEB9C2AEC3C6C00BD6820 /* StockSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockSettings.swift; sourceTree = "<group>"; };
+		D87CEB9E2AEC3CCF00BD6820 /* StockSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockSettingsView.swift; sourceTree = "<group>"; };
+		D87CEBA02AEC3CF100BD6820 /* StockSettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockSettingsStore.swift; sourceTree = "<group>"; };
 		D89E7D3C2AE94F310079EF3F /* Immocalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Immocalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D89E7D3F2AE94F310079EF3F /* ImmocalcApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImmocalcApp.swift; sourceTree = "<group>"; };
 		D89E7D412AE94F310079EF3F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -154,6 +160,7 @@
 				D89E7D702AE957130079EF3F /* SearchView.swift */,
 				D89E7D802AE973030079EF3F /* SearchSettingsView.swift */,
 				D89E7D822AE97C920079EF3F /* ObjectDetailsView.swift */,
+				D87CEB9E2AEC3CCF00BD6820 /* StockSettingsView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -171,6 +178,7 @@
 			children = (
 				D89E7D752AE958450079EF3F /* SearchResponse.swift */,
 				D89E7D912AE9937D0079EF3F /* SearchSettings.swift */,
+				D87CEB9C2AEC3C6C00BD6820 /* StockSettings.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -206,6 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				D89E7D972AE997AD0079EF3F /* SearchSettingsStore.swift */,
+				D87CEBA02AEC3CF100BD6820 /* StockSettingsStore.swift */,
 			);
 			path = stores;
 			sourceTree = "<group>";
@@ -342,6 +351,7 @@
 			files = (
 				D89E7D902AE98FF40079EF3F /* LocationDataList.swift in Sources */,
 				D89E7D762AE958450079EF3F /* SearchResponse.swift in Sources */,
+				D87CEB9D2AEC3C6C00BD6820 /* StockSettings.swift in Sources */,
 				D89E7D7D2AE96C090079EF3F /* ImmoCard.swift in Sources */,
 				D89E7D6A2AE950650079EF3F /* NavigationRow.swift in Sources */,
 				D89E7DA22AEBD34C0079EF3F /* FloatField.swift in Sources */,
@@ -349,8 +359,10 @@
 				D89E7D422AE94F310079EF3F /* ContentView.swift in Sources */,
 				D89E7DA72AEBD7550079EF3F /* IntegerField.swift in Sources */,
 				D89E7D982AE997AD0079EF3F /* SearchSettingsStore.swift in Sources */,
+				D87CEB9F2AEC3CCF00BD6820 /* StockSettingsView.swift in Sources */,
 				D89E7D712AE957130079EF3F /* SearchView.swift in Sources */,
 				D89E7DAB2AEBDE960079EF3F /* GeoSearchInput.swift in Sources */,
+				D87CEBA12AEC3CF100BD6820 /* StockSettingsStore.swift in Sources */,
 				D89E7D852AE9800D0079EF3F /* ImageSliderView.swift in Sources */,
 				D89E7D7F2AE9709A0079EF3F /* TextWithTitle.swift in Sources */,
 				D89E7D832AE97C920079EF3F /* ObjectDetailsView.swift in Sources */,
